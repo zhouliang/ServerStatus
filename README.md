@@ -51,6 +51,7 @@ git clone https://github.com/cppla/ServerStatus.git
           
 一、生成服务端程序              
 ```
+yum install gcc-c++ gcc make
 cd ServerStatus/server
 make
 ./sergate

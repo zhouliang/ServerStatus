@@ -121,6 +121,9 @@ void CServer::Update()
 			{
 				if(!Main()->Client(i)->m_Active)
 					continue;
+					
+				dbg_msg("server", "User : %s:%s", Main()->Client(i)->m_aUsername, aUsername);
+				dbg_msg("server", "User pwd: %s:%s", Main()->Client(i)->m_aPassword, aPassword);
 
 				if(str_comp(Main()->Client(i)->m_aUsername, aUsername) == 0 && str_comp(Main()->Client(i)->m_aPassword, aPassword) == 0)
 					ID = i;
