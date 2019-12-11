@@ -39,6 +39,7 @@ class CMain
 		char m_aPrice[128];
 		char m_aIp[128];
 		char m_aUrl[256];
+		char m_aDuedate[128];
 
 		int64 m_TimeConnected;
 		int64 m_LastUpdate;
