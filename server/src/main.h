@@ -37,6 +37,8 @@ class CMain
 		char m_aLocation[128];
 		char m_aPassword[128];
 		char m_aPrice[128];
+		char m_aIp[128];
+		char m_aUrl[256];
 
 		int64 m_TimeConnected;
 		int64 m_LastUpdate;

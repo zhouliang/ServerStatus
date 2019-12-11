@@ -15,7 +15,7 @@ PASSWORD = "USER_DEFAULT_PASSWORD"
 INTERVAL = 1
 PORBEPORT = 80
 CU = "10010.com"
-CT = "220.181.22.1"
+CT = "ct.ping.51.is"
 CM = "bj.10086.cn"
 
 import socket
