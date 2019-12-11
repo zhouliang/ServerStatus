@@ -98,6 +98,7 @@ function uptime() {
 						"<td id=\"memory\"><div class=\"progress\"><div style=\"width: 100%;\" class=\"progress-bar progress-bar-warning\"><small>加载中</small></div></div></td>" +
 						"<td id=\"hdd\"><div class=\"progress\"><div style=\"width: 100%;\" class=\"progress-bar progress-bar-warning\"><small>加载中</small></div></div></td>" +
 						"<td id=\"ping\"><div class=\"progress\"><div style=\"width: 100%;\" class=\"progress-bar progress-bar-warning\"><small>加载中</small></div></div></td>" +
+						"<td id=\"price\"><div class=\"progress\"><div style=\"width: 100%;\" class=\"progress-bar progress-bar-warning\"><small>加载中</small></div></div></td>" +
 					"</tr>" +
 					"<tr class=\"expandRow " + hack + "\"><td colspan=\"16\"><div class=\"accordian-body collapse\" id=\"rt" + i + "\">" +
 						"<div id=\"expand_mem\">加载中</div>" +
@@ -152,6 +153,9 @@ function uptime() {
 
 			// Location
 			TableRow.children["location"].innerHTML = result.servers[i].location;
+
+			// Price
+			TableRow.children["price"].innerHTML = result.servers[i].price;
 			if (!result.servers[i].online4 && !result.servers[i].online6) {
 				if (server_status[i]) {
 					TableRow.children["uptime"].innerHTML = "–";
