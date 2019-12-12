@@ -279,7 +279,7 @@ void CMain::JSONUpdateThread(void *pUser)
 			else
 			{
 				str_format(pBuf, sizeof(aFileBuf) - (pBuf - aFileBuf), "{ \"ip\": \"%s\",\"duedate\": \"%s\",\"url\": \"%s\",\"price\": \"%s\", \"name\": \"%s\", \"type\": \"%s\", \"host\": \"%s\", \"location\": \"%s\", \"online4\": false, \"online6\": false },\n",
-					pClients[i].m_aIp, pClients[i].m_aDuedate, pClients[i].m_aUrl, pClients[i].m_aPrice, pClients[i].m_aDuedate, pClients[i].m_aName, pClients[i].m_aType, pClients[i].m_aHost, pClients[i].m_aLocation);
+					pClients[i].m_aIp, pClients[i].m_aDuedate, pClients[i].m_aUrl, pClients[i].m_aPrice, pClients[i].m_aName, pClients[i].m_aType, pClients[i].m_aHost, pClients[i].m_aLocation);
 				pBuf += strlen(pBuf);
 			}
 		}

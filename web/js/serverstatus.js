@@ -257,7 +257,7 @@ function uptime() {
 				// IP
 				ExpandRow[0].children["expand_ip"].innerHTML = "IP地址: " + result.servers[i].ip;
 				// 客服中心
-				ExpandRow[0].children["expand_ip"].innerHTML = "客服中心: <a href='"+ result.servers[i].url +"' target='_blank'>" + result.servers[i].host + "</a>";
+				ExpandRow[0].children["expand_host"].innerHTML = "客服中心: <a href='"+ result.servers[i].url +"' target='_blank'>" + result.servers[i].host + "</a>";
 
 				// Memory
 				var Mem = ((result.servers[i].memory_used/result.servers[i].memory_total)*100.0).toFixed(0);
