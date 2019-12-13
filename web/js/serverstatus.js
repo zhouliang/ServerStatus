@@ -103,12 +103,12 @@ function uptime() {
 					"</tr>" +
 					"<tr class=\"expandRow " + hack + "\"><td colspan=\"16\"><div class=\"accordian-body collapse\" id=\"rt" + i + "\">" +
 						"<div id=\"expand_ip\">加载中</div>" +
-						"<div id=\"expand_host\">加载中</div>" +
 						"<div id=\"expand_mem\">加载中</div>" +
 						"<div id=\"expand_swap\">加载中</div>" +
 						"<div id=\"expand_hdd\">加载中</div>" +
 						"<div id=\"expand_tupd\">加载中</div>" +
 						"<div id=\"expand_custom\">加载中</div>" +
+						"<div id=\"expand_host\">加载中</div>" +
 					"</div></td></tr>"
 				);
 				TableRow = $("#servers tr#r" + i);
