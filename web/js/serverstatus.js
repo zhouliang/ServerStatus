@@ -85,7 +85,7 @@ function uptime() {
 			if (!TableRow.length) {
 				$("#servers").append(
 					"<tr id=\"r" + i + "\" data-toggle=\"collapse\" data-target=\"#rt" + i + "\" class=\"accordion-toggle " + hack + "\">" +
-						"<td id=\"online4\"><div class=\"progress\"><div style=\"width: 100%;\" class=\"progress-bar progress-bar-warning\"><small>加载中</small></div></div></td>" +
+						//"<td id=\"online4\"><div class=\"progress\"><div style=\"width: 100%;\" class=\"progress-bar progress-bar-warning\"><small>加载中</small></div></div></td>" +
 						//"<td id=\"ip_status\"><div class=\"progress\"><div style=\"width: 100%;\" class=\"progress-bar progress-bar-warning\"><small>加载中</small></div></div></td>" +
 						"<td id=\"name\">加载中</td>" +
 						"<td id=\"type\">加载中</td>" +
@@ -122,13 +122,13 @@ function uptime() {
 			}
 
 			// Online4
-			if (result.servers[i].online4) {
-				TableRow.children["online4"].children[0].children[0].className = "progress-bar progress-bar-success";
-				TableRow.children["online4"].children[0].children[0].innerHTML = "<small>开启</small>";
-			} else {
-				TableRow.children["online4"].children[0].children[0].className = "progress-bar progress-bar-danger";
-				TableRow.children["online4"].children[0].children[0].innerHTML = "<small>关闭</small>";
-			}
+			// if (result.servers[i].online4) {
+			// 	TableRow.children["online4"].children[0].children[0].className = "progress-bar progress-bar-success";
+			// 	TableRow.children["online4"].children[0].children[0].innerHTML = "<small>开启</small>";
+			// } else {
+			// 	TableRow.children["online4"].children[0].children[0].className = "progress-bar progress-bar-danger";
+			// 	TableRow.children["online4"].children[0].children[0].innerHTML = "<small>关闭</small>";
+			// }
 
 			// Online6
 			//if (result.servers[i].online6) {
@@ -256,8 +256,6 @@ function uptime() {
 
 				// IP
 				ExpandRow[0].children["expand_ip"].innerHTML = "IP地址: " + result.servers[i].ip;
-				// 客服中心
-				ExpandRow[0].children["expand_host"].innerHTML = "客服中心: <a href='"+ result.servers[i].url +"' target='_blank'>" + result.servers[i].host + "</a>";
 
 				// Memory
 				var Mem = ((result.servers[i].memory_used/result.servers[i].memory_total)*100.0).toFixed(0);
@@ -290,6 +288,8 @@ function uptime() {
 				// tcp, udp, process, thread count
 				ExpandRow[0].children["expand_tupd"].innerHTML = "TCP/UDP/进/线: " + result.servers[i].tcp_count + " / " + result.servers[i].udp_count + " / " + result.servers[i].process_count+ " / " + result.servers[i].thread_count;
 
+				// 网站链接
+				ExpandRow[0].children["expand_host"].innerHTML = "网站链接: <a href='"+ result.servers[i].url +"' target='_blank'>" + result.servers[i].host + "</a>";
 
                 // ping
                 var PING_10010 = result.servers[i].ping_10010.toFixed(0);
@@ -321,8 +321,8 @@ function uptime() {
 			$("#servers > tr.accordion-toggle").each(function(i) {
 				var TableRow = $("#servers tr#r" + i)[0];
 				var ExpandRow = $("#servers #rt" + i);
-				TableRow.children["online4"].children[0].children[0].className = "progress-bar progress-bar-error";
-				TableRow.children["online4"].children[0].children[0].innerHTML = "<small>错误</small>";
+				//TableRow.children["online4"].children[0].children[0].className = "progress-bar progress-bar-error";
+				//TableRow.children["online4"].children[0].children[0].innerHTML = "<small>错误</small>";
 				//TableRow.children["online6"].children[0].children[0].className = "progress-bar progress-bar-error";
 				//TableRow.children["online6"].children[0].children[0].innerHTML = "<small>错误</small>";
 				//TableRow.children["ip_status"].children[0].children[0].className = "progress-bar progress-bar-error";

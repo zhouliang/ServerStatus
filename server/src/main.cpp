@@ -375,11 +375,11 @@ int CMain::ReadConfig()
 			if(m_Config.m_Verbose)
 			{
 				if(Client(ID)->m_Disabled)
-					dbg_msg("main", "[#%d: Price: \"%s\", Name: \"%s\", Username: \"%s\", Type: \"%s\", Host: \"%s\", Location: \"%s\", Password: \"%s\"]",
-						ID, Client(ID)->m_aPrice, Client(ID)->m_aName, Client(ID)->m_aUsername, Client(ID)->m_aType, Client(ID)->m_aHost, Client(ID)->m_aLocation, Client(ID)->m_aPassword);
+					dbg_msg("main", "[#%d: Ip: \"%s\",Duedate: \"%s\",Url: \"%s\",Price: \"%s\", Name: \"%s\", Username: \"%s\", Type: \"%s\", Host: \"%s\", Location: \"%s\", Password: \"%s\"]",
+						ID, Client(ID)->m_aIp,Client(ID)->m_aDuedate,Client(ID)->m_aUrl,Client(ID)->m_aPrice, Client(ID)->m_aName, Client(ID)->m_aUsername, Client(ID)->m_aType, Client(ID)->m_aHost, Client(ID)->m_aLocation, Client(ID)->m_aPassword);
 				else
-					dbg_msg("main", "#%d: Price: \"%s\", Name: \"%s\", Username: \"%s\", Type: \"%s\", Host: \"%s\", Location: \"%s\", Password: \"%s\"",
-						ID, Client(ID)->m_aPrice, Client(ID)->m_aName, Client(ID)->m_aUsername, Client(ID)->m_aType, Client(ID)->m_aHost, Client(ID)->m_aLocation, Client(ID)->m_aPassword);
+					dbg_msg("main", "#%d: Ip: \"%s\",Duedate: \"%s\",Url: \"%s\",Price: \"%s\", Name: \"%s\", Username: \"%s\", Type: \"%s\", Host: \"%s\", Location: \"%s\", Password: \"%s\"",
+						ID, Client(ID)->m_aIp,Client(ID)->m_aDuedate,Client(ID)->m_aUrl,Client(ID)->m_aPrice, Client(ID)->m_aName, Client(ID)->m_aUsername, Client(ID)->m_aType, Client(ID)->m_aHost, Client(ID)->m_aLocation, Client(ID)->m_aPassword);
 
 			}
 			ID++;
