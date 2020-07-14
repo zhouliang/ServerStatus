@@ -91,7 +91,7 @@ function uptime() {
 						"<td id=\"type\">加载中</td>" +
 						"<td id=\"location\">加载中</td>" +
 						"<td id=\"uptime\">加载中</td>" +
-						"<td id=\"load\">加载中</td>" +
+						//"<td id=\"load\">加载中</td>" +
 						"<td id=\"network\">加载中</td>" +
 						"<td id=\"traffic\">加载中</td>" +
 						"<td id=\"cpu\"><div class=\"progress\"><div style=\"width: 100%;\" class=\"progress-bar progress-bar-warning\"><small>加载中</small></div></div></td>" +
@@ -165,7 +165,7 @@ function uptime() {
 			if (!result.servers[i].online4 && !result.servers[i].online6) {
 				if (server_status[i]) {
 					TableRow.children["uptime"].innerHTML = "–";
-					TableRow.children["load"].innerHTML = "–";
+	//				TableRow.children["load"].innerHTML = "–";
 					TableRow.children["network"].innerHTML = "–";
 					TableRow.children["traffic"].innerHTML = "–";
 					TableRow.children["cpu"].children[0].children[0].className = "progress-bar progress-bar-danger";
@@ -196,11 +196,11 @@ function uptime() {
 				TableRow.children["uptime"].innerHTML = result.servers[i].uptime;
 
 				// Load: default load_1, you can change show: load_1, load_5, load_15
-				if(result.servers[i].load == -1) {
-				    TableRow.children["load"].innerHTML = "–";
-				} else {
-				    TableRow.children["load"].innerHTML = result.servers[i].load_1.toFixed(2);
-				}
+				// if(result.servers[i].load == -1) {
+				//     TableRow.children["load"].innerHTML = "–";
+				// } else {
+				//     TableRow.children["load"].innerHTML = result.servers[i].load_1.toFixed(2);
+				// }
 
 				// Network
 				var netstr = "";
@@ -329,8 +329,8 @@ function uptime() {
 				//TableRow.children["ip_status"].children[0].children[0].innerHTML = "<small>错误</small>";
 				TableRow.children["uptime"].children[0].children[0].className = "progress-bar progress-bar-error";
 				TableRow.children["uptime"].children[0].children[0].innerHTML = "<small>错误</small>";
-				TableRow.children["load"].children[0].children[0].className = "progress-bar progress-bar-error";
-				TableRow.children["load"].children[0].children[0].innerHTML = "<small>错误</small>";
+//				TableRow.children["load"].children[0].children[0].className = "progress-bar progress-bar-error";
+//				TableRow.children["load"].children[0].children[0].innerHTML = "<small>错误</small>";
 				TableRow.children["network"].children[0].children[0].className = "progress-bar progress-bar-error";
 				TableRow.children["network"].children[0].children[0].innerHTML = "<small>错误</small>";
 				TableRow.children["traffic"].children[0].children[0].className = "progress-bar progress-bar-error";

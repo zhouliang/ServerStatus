@@ -139,15 +139,16 @@ def tupd():
     tcp, udp, process, thread count: for view ddcc attack , then send warning
     :return:
     '''
-    s = subprocess.check_output("ss -t|wc -l", shell=True)
-    t = int(s[:-1])-1
-    s = subprocess.check_output("ss -u|wc -l", shell=True)
-    u = int(s[:-1])-1
-    s = subprocess.check_output("ps -ef|wc -l", shell=True)
-    p = int(s[:-1])-2
-    s = subprocess.check_output("ps -xH|wc -l", shell=True)
-    d = int(s[:-1])-2
-    return t,u,p,d
+    # s = subprocess.check_output("ss -t|wc -l", shell=True)
+    # t = int(s[:-1])-1
+    # s = subprocess.check_output("ss -u|wc -l", shell=True)
+    # u = int(s[:-1])-1
+    # s = subprocess.check_output("ps -ef|wc -l", shell=True)
+    # p = int(s[:-1])-2
+    # s = subprocess.check_output("ps -xH|wc -l", shell=True)
+    # d = int(s[:-1])-2
+    # return t,u,p,d
+    return 0,0,0,0
 
 def ip_status():
     ip_check = 0
